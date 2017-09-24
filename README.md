@@ -1,9 +1,7 @@
 # Dublin Coach Backend
 
-[![Code Climate](https://codeclimate.com/github/vmasto/express-babel/badges/gpa.svg)](https://codeclimate.com/github/vmasto/express-babel)
-[![Dependencies Status](https://david-dm.org/vmasto/express-babel/status.svg)](https://david-dm.org/vmasto/express-babel)
-[![Dev Dependencies Status](https://david-dm.org/vmasto/express-babel/dev-status.svg)](https://david-dm.org/vmasto/express-babel)
-[![NSP Status](https://nodesecurity.io/orgs/vmasto/projects/d8089487-4f0e-4f69-abb1-938c6de1e6a7/badge)](https://nodesecurity.io/orgs/vmasto/projects/d8089487-4f0e-4f69-abb1-938c6de1e6a7)
+[![Code Climate](https://codeclimate.com/github/ShaneMckenna23/dublin-coach-backend.svg)](https://codeclimate.com/github/ShaneMckenna23/dublin-coach-backend)
+[![NSP Status](https://nodesecurity.io/orgs/collage/projects/073231a2-d956-48bc-a6bc-f67df93a6508/badge)](https://nodesecurity.io/orgs/collage/projects/073231a2-d956-48bc-a6bc-f67df93a6508)
 
 ### Features:
 - [Express.js](https://expressjs.com/) as the web framework.
