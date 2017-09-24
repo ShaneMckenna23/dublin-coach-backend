@@ -20,7 +20,6 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - run: apk add --no-cache libsodium-dev
       # Download and cache dependencies
       - restore_cache:
           key: yarn-cache-{{ checksum "yarn.lock" }}
