@@ -1,33 +1,40 @@
 # Javascript Node CircleCI 2.0 configuration file
+#
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
-
+#
 version: 2
-
 jobs:
   build:
     docker:
+      # specify the version you desire here
       - image: circleci/node:7.10
-        environment:
-          - DATABASE_URL=postgres://postgres@localhost:5432/dev
-          - SESSION_SECRET=wZjwhFtzQsd7r87W6AZw45Sm
-          - FACEBOOK_ID=1821424564802638
-          - FACEBOOK_SECRET=2339bdf25f236a42fc3a18280bf455e8
-          - GOOGLE_ID=xxxxx.apps.googleusercontent.com
-          - GOOGLE_SECRET=xxxxx
-          - TWITTER_KEY=xxxxx
-          - TWITTER_SECRET=xxxxx
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
     working_directory: ~/repo
+
     steps:
       - checkout
-      - setup_remote_docker
+
       # Download and cache dependencies
       - restore_cache:
-          key: yarn-cache-{{ checksum "yarn.lock" }}
-      - run: yarn install --no-progress
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+
       - save_cache:
-          key: yarn-cache-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
-      # Run unit tests
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      # run tests!
       - run: yarn lint
       - run: yarn test
+
+
