@@ -1,4 +1,4 @@
-# Express.js with Babel Boilerplate
+# Dublin Coach Backend
 
 [![Code Climate](https://codeclimate.com/github/vmasto/express-babel/badges/gpa.svg)](https://codeclimate.com/github/vmasto/express-babel)
 [![Dependencies Status](https://david-dm.org/vmasto/express-babel/status.svg)](https://david-dm.org/vmasto/express-babel)
