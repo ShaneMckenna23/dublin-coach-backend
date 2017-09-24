@@ -13,11 +13,12 @@
   "scripts": {
     "prestart": "npm run -s build",
     "start": "node build/server.js",
-    "dev": "nodemon src/server.js --exec \"node -r dotenv/config -r babel-register\"",
+    "dev":
+      "nodemon src/server.js --exec \"node -r dotenv/config -r babel-register\"",
     "clean": "rimraf build",
     "build": "npm run clean && mkdir build && babel src -s -D -d build",
     "build-prod": "npm run clean && mkdir build && babel src -D -d build",
-    "test": "jest --watch",
+    "test": "jest --watchAll",
     "lint": "esw -w src test"
   },
   "dependencies": {
@@ -105,16 +106,11 @@
         }
       ]
     ],
-    "plugins": [
-      "transform-object-rest-spread"
-    ]
+    "plugins": ["transform-object-rest-spread"]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
-    "plugins": [
-      "import",
-      "jest"
-    ],
+    "plugins": ["import", "jest"],
     "parserOptions": {
       "ecmaVersion": 2017,
       "sourceType": "module"
@@ -123,9 +119,7 @@
       "node": true,
       "jest": true
     },
-    "extends": [
-      "eslint:recommended"
-    ],
+    "extends": ["eslint:recommended"],
     "rules": {
       "jest/no-focused-tests": 2,
       "jest/no-identical-title": 2
