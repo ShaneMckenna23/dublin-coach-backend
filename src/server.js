@@ -9,7 +9,7 @@ const server = app.listen(port, host, () => {
 });
 
 // Shutdown Node.js app gracefully
-function handleExit(options, err) {
+function handleExit(options) {
   if (options.cleanup) {
     const actions = [server.close];
     actions.forEach((close, i) => {
@@ -17,7 +17,7 @@ function handleExit(options, err) {
         close(() => {
           if (i === actions.length - 1) process.exit();
         });
-      } catch (err) {
+      } catch () {
         if (i === actions.length - 1) process.exit();
       }
     });
