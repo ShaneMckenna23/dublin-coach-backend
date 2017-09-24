@@ -17,7 +17,7 @@ function handleExit(options) {
         close(() => {
           if (i === actions.length - 1) process.exit();
         });
-      } catch () {
+      } catch (err) {
         if (i === actions.length - 1) process.exit();
       }
     });
