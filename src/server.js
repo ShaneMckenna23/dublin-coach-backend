@@ -5,7 +5,7 @@ const host = process.env.HOSTNAME || "0.0.0.0";
 
 // Launch Node.js server
 const server = app.listen(port, host, () => {
-  console.log(`Node.js API server is listening on http://${host}:${port}/`);
+  //console.log(`Node.js API server is listening on http://${host}:${port}/`);
 });
 
 // Shutdown Node.js app gracefully
@@ -22,7 +22,7 @@ function handleExit(options, err) {
       }
     });
   }
-  if (err) console.log(err.stack);
+  //if (err) console.log(err.stack);
   if (options.exit) process.exit();
 }
 
