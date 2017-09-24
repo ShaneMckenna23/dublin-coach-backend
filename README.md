@@ -1,5 +1,6 @@
 # Dublin Coach Backend
 
+[![Build Status](http://circleci-badges-max.herokuapp.com/img/ShaneMckenna23/dublin-coach-backend/?token=)](https://circleci.com/gh/ShaneMckenna23/dublin-coach-backend/)
 [![Code Climate](https://codeclimate.com/github/ShaneMckenna23/dublin-coach-backend.svg)](https://codeclimate.com/github/ShaneMckenna23/dublin-coach-backend)
 [![NSP Status](https://nodesecurity.io/orgs/collage/projects/073231a2-d956-48bc-a6bc-f67df93a6508/badge)](https://nodesecurity.io/orgs/collage/projects/073231a2-d956-48bc-a6bc-f67df93a6508)
 
