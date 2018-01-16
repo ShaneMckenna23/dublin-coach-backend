@@ -21,7 +21,8 @@
     "test-build": "jest",
     "start-prod": "npm run build-prod && node build/index.js",
     "test": "jest",
-    "lint": "esw -w src test"
+    "lint": "esw -w src test",
+    "gcloud-auth": "node config/gcloud.js"
   },
   "dependencies": {
     "apollo-engine": "^0.5.0",
