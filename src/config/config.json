@@ -1,0 +1,8 @@
+{
+  "graphqlEndpoint": "/graphql",
+  "port": 3000,
+  "graphql": {
+    "tracing": true,
+    "cacheControl": true
+  }
+}

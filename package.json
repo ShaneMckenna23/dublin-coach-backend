@@ -1,35 +1,38 @@
 {
-  "name": "express-babel",
+  "name": "dublin-coach-backend",
   "version": "1.0.0",
   "description": "Using latest JavaScript features on the server",
-  "repository": "https://github.com/vmasto/express-babel",
-  "author": "Vassilis Mastorostergios <vmasto@gmail.com>",
+  "repository": "https://github.com/shanemckenna23/dublin-coach-backend",
+  "author": "Shane Mckenna <shanemckenna23@hotmail.co.uk>",
   "license": "MIT",
-  "main": "build/server.js",
+  "main": "build/index.js",
   "engines": {
-    "node": "~6.9.1",
-    "npm": ">=3.10.0"
+    "node": ">=7",
+    "npm": ">=4"
   },
   "scripts": {
     "prestart": "npm run -s build",
-    "start": "node build/server.js",
+    "start": "node build/index.js",
     "dev":
-      "nodemon src/server.js --exec \"node -r dotenv/config -r babel-register\"",
+      "nodemon src/index.js --exec \"node -r dotenv/config -r babel-register\"",
     "clean": "rimraf build",
     "build": "npm run clean && mkdir build && babel src -s -D -d build",
     "build-prod": "npm run clean && mkdir build && babel src -D -d build",
     "test-build": "jest",
+    "start-prod": "npm run build-prod && node build/index.js",
     "test": "jest --watch",
     "lint": "esw -w src test"
   },
   "dependencies": {
+    "apollo-engine": "^0.5.0",
     "apollo-server-express": "^1.1.2",
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "bcrypt": "^1.0.3",
     "bindings": "^1.3.0",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
-    "compression": "^1.7.0",
+    "compression": "^1.7.1",
     "connect-redis": "^3.3.0",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
@@ -48,10 +51,12 @@
     "i18next-express-middleware": "^1.0.6",
     "i18next-node-fs-backend": "^1.0.0",
     "jest": "^21.1.0",
+    "jsonwebtoken": "^8.1.0",
     "juice": "^4.1.1",
     "knex": "^0.13.0",
     "morgan": "^1.7.0",
-    "my-sql": "^1.2.1",
+    "multer": "^1.3.0",
+    "mysql2": "^1.4.2",
     "node-addon-api": "^0.6.3",
     "node-fetch": "^1.7.3",
     "nodemailer": "^4.1.0",
@@ -64,6 +69,7 @@
     "pug": "^2.0.0-beta11",
     "redis": "^2.8.0",
     "rimraf": "^2.6.1",
+    "sequelize": "^4.12.0",
     "source-map-support": "^0.4.18",
     "validator": "^8.2.0"
   },
@@ -94,7 +100,10 @@
     "lint-staged": "^4.2.1",
     "nodemon": "^1.11.0",
     "prettier": "^1.7.0",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
   },
   "babel": {
     "presets": [

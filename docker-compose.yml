@@ -1,0 +1,18 @@
+version: "2"
+services:
+  dublin-coach-backend:
+    container_name: dublin-coach-backend
+    image: dublin-coach-backend:1.0
+    ports: 
+      - "3000:3000"
+    links:
+      - cloudSQL
+    
+    cloudSQL:
+      container_name: cloudSQL
+      image: dublin-coach-cloudSQL
+      ports:
+        - "3306:3306"
+      volumes:
+        - //c/Users/Shane/Documents/GitHub/dublin-coach-backend/.gcloud:/config
+        - /cloudsql:/cloudsql
