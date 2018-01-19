@@ -68,7 +68,7 @@ jobs:
 
       - run:
           name: Authenticate with Google Cloud
-          command: gcloud auth activate-service-account circle-ci@dublin-coach.iam.gserviceaccount.com --key-file=config/gcloud.json
+          command: gcloud auth activate-service-account circleci@dublin-coach-123.iam.gserviceaccount.com --key-file=config/gcloud.json
 
       - run:
           name: Push image to Container Registry
