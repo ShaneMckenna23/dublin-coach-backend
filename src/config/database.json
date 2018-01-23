@@ -11,7 +11,7 @@
     "username": "proxyuser",
     "password": "dbpassword",
     "database": "dublin_coach_db",
-    "host": "127.0.0.1",
+    "host": "10.31.253.215",
     "dialect": "mysql"
   }
 }
