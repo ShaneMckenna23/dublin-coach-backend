@@ -90,7 +90,7 @@ jobs:
           name: Deploy new image
           command: |
             TAG=0.$CIRCLE_BUILD_NUM
-            kubectl set image deployment/dublin-coach-backend dublin-coach-backend=eu.gcr.io/dublin-coach-123/dublin-coach-frontend:$TAG
+            kubectl set image deployment/dublin-coach-backend dublin-coach-backend=eu.gcr.io/dublin-coach-123/dublin-coach-backend:$TAG
 
 
 workflows:
