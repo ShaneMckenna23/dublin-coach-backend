@@ -76,6 +76,22 @@ jobs:
             TAG=0.$CIRCLE_BUILD_NUM
             gcloud docker -- push eu.gcr.io/dublin-coach-123/dublin-coach-backend:$TAG
 
+      - run:
+          name: Gcloud project config
+          command: |
+            gcloud config set project dublin-coach-123
+            gcloud config set compute/zone europe-west1-b
+
+      - run:
+          name: Get cluster credentials
+          command: gcloud container clusters get-credentials dublin-coach-cluster
+
+      - run:
+          name: Deploy new image
+          command: |
+            TAG=0.$CIRCLE_BUILD_NUM
+            kubectl set image deployment/dublin-coach-backend dublin-coach-backend=eu.gcr.io/dublin-coach-123/dublin-coach-frontend:$TAG
+
 
 workflows:
   version: 2
