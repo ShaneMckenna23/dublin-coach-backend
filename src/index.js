@@ -27,4 +27,3 @@ setupGraphQL(server);
 
 // Start server
 setupStartServer(server);
-

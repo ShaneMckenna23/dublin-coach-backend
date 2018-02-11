@@ -5,7 +5,6 @@ import Sequelize from "sequelize";
 import databaseConnection from "../setup/databaseConnection";
 
 const models = {
-  Thought: databaseConnection.import("./thought"),
   Stop: databaseConnection.import("./stop")
 };
 

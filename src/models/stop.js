@@ -1,4 +1,4 @@
-// Thought
+// Stop
 export default (sequelize, DataTypes) => {
   return sequelize.define("stops", {
     name: {

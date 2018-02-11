@@ -13,14 +13,12 @@
   "scripts": {
     "prestart": "npm run -s build",
     "start": "node build/index.js",
-    "dev":
-      "nodemon src/index.js --exec \"node -r dotenv/config -r babel-register\"",
+    "dev": "nodemon src/index.js --exec \"node -r dotenv/config -r babel-register\"",
     "clean": "rimraf build",
     "build": "npm run clean && mkdir build && babel src -s -D -d build",
     "build-prod": "npm run clean && mkdir build && babel src -D -d build",
     "test-build": "jest",
-    "start-prod":
-      "npm run build-prod && cross-env NODE_ENV=production node build/index.js",
+    "start-prod": "npm run build-prod && cross-env NODE_ENV=production node build/index.js",
     "test": "jest",
     "lint": "esw -w src test",
     "gcloud-auth": "node config/gcloud.js"
@@ -28,6 +26,7 @@
   "dependencies": {
     "apollo-engine": "^0.5.0",
     "apollo-server-express": "^1.1.2",
+    "axios": "^0.17.1",
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "bcrypt": "^1.0.3",
@@ -119,11 +118,16 @@
         }
       ]
     ],
-    "plugins": ["transform-object-rest-spread"]
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
-    "plugins": ["import", "jest"],
+    "plugins": [
+      "import",
+      "jest"
+    ],
     "parserOptions": {
       "ecmaVersion": 2017,
       "sourceType": "module"
@@ -132,7 +136,9 @@
       "node": true,
       "jest": true
     },
-    "extends": ["eslint:recommended"],
+    "extends": [
+      "eslint:recommended"
+    ],
     "rules": {
       "jest/no-focused-tests": 2,
       "jest/no-identical-title": 2
