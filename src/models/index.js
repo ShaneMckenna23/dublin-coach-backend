@@ -5,7 +5,8 @@ import Sequelize from "sequelize";
 import databaseConnection from "../setup/databaseConnection";
 
 const models = {
-  Stop: databaseConnection.import("./stop")
+  Stop: databaseConnection.import("./stop"),
+  User: databaseConnection.import("./user")
 };
 
 Object.keys(models).forEach(modelName => {

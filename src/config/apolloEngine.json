@@ -1,1 +1,6 @@
-{ "apiKey": "service:ShaneMckenna23-dublin-coach:YZSS5AeoArdlqL__4erq4A" }
+{
+  "apiKey": "service:ShaneMckenna23-dublin-coach:YZSS5AeoArdlqL__4erq4A",
+  "logging": {
+    "level": "ERROR"
+  }
+}

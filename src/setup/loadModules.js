@@ -17,7 +17,7 @@ export default function(server) {
     engineConfig: {
       apiKey: apolloEngine.apiKey,
       logging: {
-        level: "DEBUG" // Engine Proxy logging level. DEBUG, INFO, WARN or ERROR
+        level: "Error" // Engine Proxy logging level. DEBUG, INFO, WARN or ERROR
       }
     },
     graphqlPort: 3000, // GraphQL port

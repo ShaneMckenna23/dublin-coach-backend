@@ -1,6 +1,6 @@
 import { GraphQLObjectType } from "graphql";
 
-import * as stop from "./stops/fields/query";
+import * as stop from "./stop/fields/query";
 import * as news from "./news/fields/query";
 
 // Query

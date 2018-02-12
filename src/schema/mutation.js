@@ -2,7 +2,8 @@
 import { GraphQLObjectType } from "graphql";
 
 // App Imports
-import * as stop from "./stops/fields/mutations";
+import * as stop from "./stop/fields/mutations";
+import * as user from "./user/fields/mutations";
 
 // Mutation
 const mutation = new GraphQLObjectType({
@@ -10,7 +11,8 @@ const mutation = new GraphQLObjectType({
   description: "...",
 
   fields: {
-    ...stop
+    ...stop,
+    ...user
   }
 });
 

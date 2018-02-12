@@ -1,6 +1,5 @@
-// Stop
 export default (sequelize, DataTypes) => {
-  return sequelize.define("stops", {
+  return sequelize.define("stop", {
     name: {
       type: DataTypes.STRING
     },
