@@ -11,7 +11,8 @@
     "start": "node build/index.js",
     "start-prod": "npm run build && cross-env NODE_ENV=production node build/index.js",
     "clean": "rimraf build",
-    "build": "npm run clean && mkdir build && babel src -s -D -d build"
+    "build": "npm run clean && mkdir build && babel src -s -D -d build",
+    "test": "jest"
   },
   "dependencies": {
     "apollo-engine": "0.8.5",
@@ -21,6 +22,7 @@
     "bcryptjs": "^2.4.3",
     "graphql-modules": "^0.2.2",
     "graphql-yoga": "1.2.0",
+    "jest": "^22.3.0",
     "jsonwebtoken": "^8.1.1",
     "mysql2": "^1.5.2",
     "rimraf": "^2.6.2",
