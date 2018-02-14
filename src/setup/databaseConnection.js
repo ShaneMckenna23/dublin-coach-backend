@@ -1,15 +1,11 @@
-// Imports
 import { Sequelize } from "sequelize";
 
-// App Imports
-import env from "../config/env";
-import databaseConfig from "../config/database.json";
+import env from "./env";
+import databaseConfig from "../../config/database.json";
 
 console.log(env);
-// Load database config
 const databaseConfigEnv = databaseConfig[env];
 
-// Create new database connection
 const connection = new Sequelize(
   databaseConfigEnv.database,
   databaseConfigEnv.username,
@@ -22,7 +18,6 @@ const connection = new Sequelize(
   }
 );
 
-// Test connection
 console.info("SETUP - Connecting database...");
 
 connection

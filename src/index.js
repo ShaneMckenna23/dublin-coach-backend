@@ -1,29 +1,13 @@
-// Imports
-import express from "express";
+import { GraphQLServer } from 'graphql-yoga';
+import { bundle } from 'graphql-modules';
+import loadMiddleware from "./setup/middleware";
+import startServer from "./setup/startServer";
 
-// App Imports
-import setupLoadModules from "./setup/loadModules";
-import setupGraphQL from "./setup/graphql";
-import setupStartServer from "./setup/startServer";
+import modules from './types'
 
-// Create express server
-const server = express();
+const server = new GraphQLServer(bundle(modules))
 
-server.set("port", 3000);
+loadMiddleware(server)
 
-server.get("/favicon.ico", function(req, res) {
-  res.status(204);
-});
+startServer(server)
 
-server.get("/", function(req, res) {
-  res.send("Dublin-Coach-Backend");
-});
-
-// Setup load modules
-setupLoadModules(server);
-
-// Setup GraphQL
-setupGraphQL(server);
-
-// Start server
-setupStartServer(server);

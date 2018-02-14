@@ -1,26 +1,20 @@
-// App Imports
-import models from '../models/index'
-import config from '../config/config.json'
+import models from '../models'
 
-// Sync database tables and start server
+const options = {
+    port: 3000,
+    endpoint: '/graphql'
+  }
+
 export default function(server) {
     console.info('SETUP - Syncing database tables...')
 
-    // Create tables
     models.sequelize.sync({})
         .then(() => {
             console.info('INFO - Database sync complete.')
 
             console.info('SETUP - Starting server...')
 
-            // Start web server
-            server.listen(config.port, (error) => {
-                if(error) {
-                    console.error('ERROR - Unable to start server.')
-                } else {
-                    console.info(`INFO - Server started on port ${ config.port }.`)
-                }
-            })
+            server.start(options, () => console.log('Server is running on localhost:3000'))
         })
         .catch(() => {
             console.error('ERROR - Unable to sync database.')
