@@ -12,7 +12,8 @@
     "start-prod": "npm run build && cross-env NODE_ENV=production node build/index.js",
     "clean": "rimraf build",
     "build": "npm run clean && mkdir build && babel src -s -D -d build",
-    "test": "jest"
+    "test": "jest",
+    "gcloud-auth": "node config/gcloud.js"
   },
   "dependencies": {
     "apollo-engine": "0.8.5",
