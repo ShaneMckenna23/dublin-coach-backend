@@ -5,44 +5,15 @@
 [![Code Climate](https://codeclimate.com/github/ShaneMckenna23/dublin-coach-backend.svg)](https://codeclimate.com/github/ShaneMckenna23/dublin-coach-backend)
 [![NSP Status](https://nodesecurity.io/orgs/collage/projects/073231a2-d956-48bc-a6bc-f67df93a6508/badge)](https://nodesecurity.io/orgs/collage/projects/073231a2-d956-48bc-a6bc-f67df93a6508)
 
-### Features:]
-- GraphQL yogo
-- [Express.js](https://expressjs.com/) as the web framework.
+### Features:
+- GraphQL Yogo
 - ES2017+ support with [Babel](https://babeljs.io/).
-- Automatic polyfill requires based on environment with [babel-preset-env](https://github.com/babel/babel-preset-env).
-- Linting with [ESLint](http://eslint.org/).
+- Continuous deployment to Google kubernetes Engine.
 - Testing with [Jest](https://facebook.github.io/jest/).
-
-## Getting started
-
-```sh
-# Clone the project
-git clone https://github.com/ShaneMckenna23/dublin-coach-backend.git
-cd dublin-coach-backend
-
-# Make it your own
-rm -rf .git && git init && npm init
-
-# Install dependencies
-npm install
-
-# or if you're using Yarn
-yarn
-```
-
-_If you don't use [Yarn](https://yarnpkg.com/) you can just replace `yarn` with `npm` in the commands that follow._
-
-Then you can begin development:
-
-```sh
-yarn run dev
-```
-
-This will launch a [nodemon](https://nodemon.io/) process for automatic server restarts when your code changes.
 
 ### Testing
 
-Testing is powered by [Jest](https://facebook.github.io/jest/). This project also uses [supertest](https://github.com/visionmedia/supertest) for demonstrating a simple routing smoke test suite. Feel free to remove supertest entirely if you don't wish to use it.
+Testing is powered by [Jest](https://facebook.github.io/jest/).
 
 Start the test runner in watch mode with:
 
@@ -58,15 +29,33 @@ yarn test -- --coverage
 
 (the extra double hyphen `--` is necessary).
 
-### Linting
+### GraphQL Yogo
 
-Linting is set up using [ESLint](http://eslint.org/). It uses ESLint's default [eslint:recommended](https://github.com/eslint/eslint/blob/master/conf/eslint.json) rules. Feel free to use your own rules and/or extend another popular linting config (e.g. [airbnb's](https://www.npmjs.com/package/eslint-config-airbnb) or [standard](https://github.com/feross/eslint-config-standard)).
+Fully-featured GraphQL Server with focus on easy setup, performance & great developer experience
 
-Begin linting in watch mode with:
+## Overview
 
-```sh
-yarn run lint
-```
+* **Easiest way to run a GraphQL server:** Sensible defaults & includes everything you need with minimal setup.
+* **Includes Subscriptions:** Built-in support for GraphQL subscriptions using WebSockets.
+* **Compatible:** Works with all GraphQL clients (Apollo, Relay...) and fits seamless in your GraphQL workflow.
+
+`graphql-yoga` is based on the following libraries & tools:
+
+  * [`express`](https://github.com/expressjs/express)/[`apollo-server`](https://github.com/apollographql/apollo-server): Performant, extensible web server framework
+  * [`graphql-subscriptions`](https://github.com/apollographql/graphql-subscriptions)/[`subscriptions-transport-ws`](https://github.com/apollographql/subscriptions-transport-ws): GraphQL subscriptions server
+  * [`graphql.js`](https://github.com/graphql/graphql-js)/[`graphql-tools`](https://github.com/apollographql/graphql-tools): GraphQL engine & schema helpers
+  * [`graphql-playground`](https://github.com/graphcool/graphql-playground): Interactive GraphQL IDE
+
+## Features
+
+* GraphQL spec-compliant
+* File upload
+* GraphQL Subscriptions
+* TypeScript typings
+* GraphQL Playground
+* Extensible via Express middlewares
+* Apollo Tracing
+* Accepts both `application/json` and `application/graphql` content-type
 
 ### Environmental variables in development
 
