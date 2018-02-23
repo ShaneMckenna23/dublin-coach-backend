@@ -21,6 +21,7 @@ async function getAllStops() {
 
 async function searchStops(parentValue, { filter }) {
   return await models.Stop.findAll({
+    limit: 5,
     where: {
       name: {
         [Op.like]: '%' + filter + '%'
