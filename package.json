@@ -21,6 +21,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "bcryptjs": "^2.4.3",
+    "cross-env": "^5.1.4",
     "graphql-modules": "^0.2.2",
     "graphql-yoga": "1.2.0",
     "jest": "^22.3.0",
