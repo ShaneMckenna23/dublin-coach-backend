@@ -11,7 +11,7 @@ const resolvers = {
   }
 }
 
-async function getStopById(parentValue, { id }) {
+export async function getStopById(parentValue, { id }) {
   return await models.Stop.findOne({ where: { id } });
 }
 

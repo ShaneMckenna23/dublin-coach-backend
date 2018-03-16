@@ -4,7 +4,10 @@ import databaseConnection from "./setup/databaseConnection";
 
 const models = {
   Stop: databaseConnection.import("./types/Stop/model"),
-  User: databaseConnection.import("./types/User/model")
+  User: databaseConnection.import("./types/User/model"),
+  Route: databaseConnection.import("./types/Route/model"),
+  RouteDetail: databaseConnection.import("./types/RouteDetail/model"),
+  Schedule: databaseConnection.import("./types/Schedule/model")
 };
 
 Object.keys(models).forEach(modelName => {
