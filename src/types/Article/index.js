@@ -9,6 +9,7 @@ const schema = `
     photo: String!
     photoDesc: String!
     author: String!
+    link: String!
   }
 `
 

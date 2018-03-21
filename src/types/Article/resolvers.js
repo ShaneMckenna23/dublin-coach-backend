@@ -21,6 +21,7 @@ async function getArticles(parentValue, { count }) {
           headline: el.data.headline.iv,
           extract: el.data.extract.iv,
           text: el.data.text.iv,
+          link: el.data.link.iv,
           publishDate: el.data.publishDate.iv.slice(0, 10),
           photo: el.data.photo.iv[0],
           photoDesc: el.data.photoDesc.iv,
