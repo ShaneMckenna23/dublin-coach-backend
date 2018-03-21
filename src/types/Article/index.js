@@ -13,7 +13,7 @@ const schema = `
 `
 
 const queries = `
-  getArticles: [Article]
+  getArticles(count: Int!): [Article]
 `
 
 export default () => ({
