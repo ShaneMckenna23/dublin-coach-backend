@@ -28,7 +28,9 @@ async function getArticles(parentValue, { count }) {
           author: el.data.author.iv
         };
       });
-    });
+    }).catch(error => {
+      console.log(error.response)
+  });
 }
 
 export default resolvers
