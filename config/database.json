@@ -9,9 +9,9 @@
 
   "production": {
     "username": "proxyuser",
-    "password": "dbpassword",
+    "password": null,
     "database": "dublin_coach_db",
-    "host": "10.31.253.215",
+    "host": "10.31.250.246",
     "dialect": "mysql"
   }
 }
