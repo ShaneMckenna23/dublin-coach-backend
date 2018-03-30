@@ -20,7 +20,7 @@ spec:
         command:
         - /cloud_sql_proxy
         - -dir=/cloudsql
-        - -instances=dublin-coach-123:europe-west2:dublin-coach-db=tcp:0.0.0.0:3306
+        - -instances=dublin-coach-199613:europe-west2:dublin-coach-db=tcp:0.0.0.0:3306
         - -credential_file=/credentials/credentials.json
         ports:
         - name: port-database

@@ -3,7 +3,7 @@
     "username": "dbuser",
     "password": null,
     "database": "dublin_coach_db",
-    "host": "35.189.113.192",
+    "host": "35.189.109.37",
     "dialect": "mysql"
   },
 
