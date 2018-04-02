@@ -8,6 +8,16 @@ const resolvers = {
 }
 
 async function getArticles(parentValue, { count }) {
+  return [{
+    headline: "TEST",
+    extract: "TEST",
+    text: "TEST",
+    link: "TEST",
+    publishDate: "TEST",
+    photo: "TEST",
+    photoDesc: "TEST",
+    author: "TEST"
+  }];
   return await axios
     .get("https://cloud.squidex.io/api/content/dublin-coach-cms/article?$top="+count+"&$orderby=data/publishDate/iv desc", {
       headers: {
