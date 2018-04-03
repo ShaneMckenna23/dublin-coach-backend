@@ -8,23 +8,23 @@ const resolvers = {
 }
 
 async function getArticles(parentValue, { count }) {
-  let a = {
-    headline: "TEST",
-    extract: "TEST",
-    text: "TEST",
-    link: "TEST",
-    publishDate: "TEST",
-    photo: "TEST",
-    photoDesc: "TEST",
-    author: "TEST"
-  }
-  let mock = []
-  mock.push(a)
-  mock.push(a)
-  mock.push(a)
-  mock.push(a)
-  mock.push(a)
-  return mock;
+  // let a = {
+  //   headline: "TEST",
+  //   extract: "TEST",
+  //   text: "TEST",
+  //   link: "TEST",
+  //   publishDate: "TEST",
+  //   photo: "TEST",
+  //   photoDesc: "TEST",
+  //   author: "TEST"
+  // }
+  // let mock = []
+  // mock.push(a)
+  // mock.push(a)
+  // mock.push(a)
+  // mock.push(a)
+  // mock.push(a)
+  // return mock;
 
   return await axios
     .get("https://cloud.squidex.io/api/content/dublin-coach-cms/article?$top="+count+"&$orderby=data/publishDate/iv desc", {
