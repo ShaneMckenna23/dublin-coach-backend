@@ -1,0 +1,39 @@
+query getArticles {
+  getArticles(count: 4) {
+    headline
+    extract
+    text
+    publishDate
+    photo
+    photoDesc
+    author
+    link
+  }
+}
+
+query SearchStops{
+  searchStops(filter:"city"){
+    id
+    name
+    lat
+    long
+  }
+}
+
+query GetAllStops{
+  getAllStops{
+    id
+    name
+    lat
+    long
+  }
+}
+
+query GetStop{
+  getStopById(id: 2){
+    id
+    name
+    lat
+    long
+  }
+}
