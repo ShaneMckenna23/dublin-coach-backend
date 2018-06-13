@@ -16,6 +16,7 @@ async function getArticles(parentValue, { count }) {
       }
     })
     .then(function(response) {
+      console.log("Response: " + response)
       return response.data.items.map(function(el) {
         return {
           headline: el.data.headline.iv,
